@@ -3,18 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "jocardelle.github.io"
+  title: "Josephine Cardelle"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: resources.qmd
+        text: Resources
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: lumen
+      dark: superhero
     css: styles.css
     toc: true
+    page-layout: full
 
-editor: visual
 

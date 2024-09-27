@@ -1,4 +1,28 @@
 ---
-title: "jocardelle.github.io"
+#title: "Josephine Cardelle"
+image: Josephine_Cardelle.jpeg
+about: 
+  template: solana
+  links: 
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/josephine-cardelle-8791a3209/
+      target: _blank
+    - text: GitHub
+      href: https://github.com/jocardelle
+      target: _blank
+    - text: Email
+      href: mailto:jcardelle@bren.ucsb.edu
+      target: _blank
+      
+toc: false
 ---
 
+Hi everyone! I’m Josephine(Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a Bachelor of Engineering degree in civil engineering with a specialization in geotechnical engineering from McGill University, and am excited to utilize both these degrees to broaden my impact on environmental issues.  Outside of work and school I love hiking, running, reading, scuba diving and traveling!
+
+## Education
+
+xxx
+
+## Professional Experience
+
+xxx
