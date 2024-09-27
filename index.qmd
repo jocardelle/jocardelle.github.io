@@ -5,7 +5,7 @@ about:
   template: solana
   links: 
     - text: LinkedIn
-      href: https://www.linkedin.com/in/josephine-cardelle-8791a3209/
+      href: https://www.linkedin.com/in/josephine-cardelle/
       target: _blank
     - text: GitHub
       href: https://github.com/jocardelle
