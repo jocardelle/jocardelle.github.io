@@ -4,21 +4,27 @@ project:
 
 website:
   title: "Josephine Cardelle"
+  favicon: images/shape.png
   navbar:
+    title: False
+    logo: images/Josephine-logo-large2.png
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - href: resources.qmd
         text: Resources
-
+      - text: CV
+        href: CV/JCardelle_Resume.pdf
+  page-footer:
+    background: light
+    left: Copyright 2024, Josephine Cardelle
+    right: This website is built with {{< fa brands github title="the octocat github icon" >}}
 format:
   html:
-    theme: 
-      light: lumen
-      dark: superhero
-    css: styles.css
-    toc: true
+    theme: styles.scss
+    mainfont: Lato
+    toc: false
     page-layout: full
 
 

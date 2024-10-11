@@ -5,12 +5,15 @@ about:
   template: solana
   links: 
     - text: LinkedIn
+      icon: linkedin
       href: https://www.linkedin.com/in/josephine-cardelle/
       target: _blank
     - text: GitHub
+      icon: github
       href: https://github.com/jocardelle
       target: _blank
     - text: Email
+      icon: envelope
       href: mailto:jcardelle@bren.ucsb.edu
       target: _blank
       
