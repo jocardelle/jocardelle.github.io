@@ -1,0 +1,53 @@
+/*-- scss:defaults --*/
+
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+// fonts
+$aleo: "Aleo", serif;
+
+// Colors
+$deep-moss-green: #386641;
+$palm-leaf: #6A994E;
+$middle-green-yellow: #A7C957;
+$burlywood: #D8C385;
+$sulu: #FAF8EB;
+$philippine-grey: #8E8D8A;
+
+
+// Quarto Sass Variables
+$body-bg: $sulu;
+$navbar-bg: $palm-leaf;
+$navbar-fg: $sulu;
+$navbar-hl: $philippine-grey;
+
+
+/*-- scss:rules --*/
+
+.navbar-brand img { 
+  max-height: 50px;
+  width: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $aleo;
+}
+
+h1, h2 {
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.title {
+  color: #386641;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.green-text{
+  color:$palm-leaf;
+}
