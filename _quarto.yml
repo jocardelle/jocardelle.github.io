@@ -12,6 +12,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: posts.qmd
+        text: Blog
       - href: resources.qmd
         text: Resources
       - text: CV
