@@ -22,7 +22,7 @@ draft-mode: visible
 
 I'm going to insert a footnote here[^1]
 
-[^1]: Here is a new footnote
+[^1]: Here is a new footnote.
 
 ## This is my second section
 
