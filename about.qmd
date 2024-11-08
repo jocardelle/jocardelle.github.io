@@ -1,13 +1,15 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-## What I do for work
+## A Short Background
 
-some text goes here
+Coming soon:) 
 
-## What I do for fun
+## Currently
 
-<p class ="green-text center-text">*fun stuff*<p>
+Coming soon:)
 
-[here is some more text]{.green-text}
+## Fun Stuff!
+
+Coming soon:)

@@ -18,41 +18,48 @@
     "href": "index.html",
     "title": "Josephine Cardelle",
     "section": "",
-    "text": "Hi everyone! I’m Josephine(Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a Bachelor of Engineering degree in civil engineering with a specialization in geotechnical engineering from McGill University, and am excited to utilize both these degrees to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling!"
+    "text": "Hi everyone! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out!"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Josephine Cardelle",
     "section": "Education",
-    "text": "Education\nMaster of Environmental Data Science (Expected June 2024)\n\nBren School of Environmental Science & Management, UCSB\n\nBachelor of Engineering, Civil Engineering (May 2021)\n\nMcGill University, Montreal, CA\nSpecialization in Geotechnical Engineering"
+    "text": "Education\nMaster of Environmental Data Science (Expected June 2024)\n\nBren School of Environmental Science & Management, UCSB\n\nBachelor of Engineering, Civil Engineering (May 2021)\n\nMcGill University\nSpecialization in Geotechnical Engineering"
   },
   {
     "objectID": "index.html#professional-experience",
     "href": "index.html#professional-experience",
     "title": "Josephine Cardelle",
     "section": "Professional Experience",
-    "text": "Professional Experience\nCivil/Agricultural Engineer (January 2022 - April 2024)\n\nUSDA - Natural Resources Conservation Service\nCommonwelath of the Northern Mariana Islands (CNMI)"
+    "text": "Professional Experience\nCivil/Agricultural Engineer (January 2022 - April 2024)\n\nUSDA - Natural Resources Conservation Service\nCommonwealth of the Northern Mariana Islands (CNMI)\n\nEngineering Undergraduate Researcher (May 2019 - August 2019)\n\nEnvironmental Geomechanics Laboratory - McGill University\n\nConservation Corps (July 2021 - October 2021)\n\nAmeriCorps - American Conservation Experience\nHurricane, Utah"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "some text goes here"
+    "text": "Coming soon:)"
   },
   {
-    "objectID": "about.html#what-i-do-for-work",
-    "href": "about.html#what-i-do-for-work",
-    "title": "About",
+    "objectID": "about.html#a-short-background",
+    "href": "about.html#a-short-background",
+    "title": "About Me",
     "section": "",
-    "text": "some text goes here"
+    "text": "Coming soon:)"
   },
   {
-    "objectID": "about.html#what-i-do-for-fun",
-    "href": "about.html#what-i-do-for-fun",
-    "title": "About",
-    "section": "What I do for fun",
-    "text": "What I do for fun\n\nfun stuff\n\nhere is some more text"
+    "objectID": "about.html#currently",
+    "href": "about.html#currently",
+    "title": "About Me",
+    "section": "Currently",
+    "text": "Currently\nComing soon:)"
+  },
+  {
+    "objectID": "about.html#fun-stuff",
+    "href": "about.html#fun-stuff",
+    "title": "About Me",
+    "section": "Fun Stuff!",
+    "text": "Fun Stuff!\nComing soon:)"
   }
 ]

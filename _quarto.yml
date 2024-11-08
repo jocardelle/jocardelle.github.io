@@ -11,13 +11,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About Me
       - href: posts.qmd
         text: Blog
-      - href: resources.qmd
-        text: Resources
       - text: CV
-        href: CV/JCardelle_Resume.pdf
+        href: CV/J_Cardelle_Resume.pdf
   page-footer:
     background: light
     left: Copyright 2024, Josephine Cardelle
