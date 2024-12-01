@@ -195,7 +195,7 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <li>Data wrangling with dates</li>
 <li>Visualizing time series</li>
 <li>Using <code>rolling()</code> to find a rolling average</li>
-<li>True and false color imagery</li>
+<li>True vs.&nbsp;false color imagery</li>
 </ul>
 </section>
 <section id="datasets" class="level2">
@@ -900,7 +900,7 @@ datum:                    World Geodetic System 1984 ensemble</code></pre>
 </section>
 <section id="selecting-data-1" class="level3">
 <h3 class="anchored" data-anchor-id="selecting-data-1">Selecting data</h3>
-<p>Next&lt; I want to find subset the data to contain just the information regarding the Thomas Fire of 2017.</p>
+<p>Next, I want to find subset the data to contain just the information regarding the Thomas Fire of 2017.</p>
 <div id="7c1a091e-2eab-4604-927a-79c1caa58057" class="cell" data-tags="[]" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the Thomas Fire in 2017 and save to new variable</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>thomas_fire <span class="op">=</span> fire_perimeter[(fire_perimeter[<span class="st">'FIRE_NAME'</span>] <span class="op">==</span> <span class="st">"THOMAS"</span>) <span class="op">&amp;</span> (fire_perimeter[<span class="st">'YEAR_'</span>] <span class="op">==</span> <span class="dv">2017</span>)] </span>
