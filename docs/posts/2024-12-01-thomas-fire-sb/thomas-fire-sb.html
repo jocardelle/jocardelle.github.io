@@ -233,6 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#true-color-imagery" id="toc-true-color-imagery" class="nav-link" data-scroll-target="#true-color-imagery">True color imagery</a></li>
   <li><a href="#false-color-imagery" id="toc-false-color-imagery" class="nav-link" data-scroll-target="#false-color-imagery">False color imagery</a></li>
   </ul></li>
+  <li><a href="#data-citations" id="toc-data-citations" class="nav-link" data-scroll-target="#data-citations">Data Citations</a></li>
   </ul>
 </nav>
     </div>
@@ -243,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><a href="https://github.com/jocardelle/thomas-fire-aqi">Github Repository</a></p>
+<p>More content available the <a href="https://github.com/jocardelle/thomas-fire-aqi">Github Repository</a></p>
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
 <p>The Thomas Fire, which burned across Santa Barbara and Ventura counties in December 2017, has been one of California’s largest wildfires, devastating over 280,000 acres of land. The fire started on December 4, 2017 and was considered contained on January 2, 2018. In this task, I first used <a href="https://www.airnow.gov/aqi/aqi-basics/">Air Quality Index (AQI)</a> data from the <a href="https://www.epa.gov">US Environmental Protection Agency</a> to visualize the impact on the AQI of the 2017 <a href="https://en.wikipedia.org/wiki/Thomas_Fire">Thomas Fire</a> in Santa Barbara County. I then visualized the effects of the fire on the land through using true and false color imagery.</p>
@@ -255,11 +256,12 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <section id="highlights" class="level2">
 <h2 class="anchored" data-anchor-id="highlights">Highlights</h2>
 <ul>
-<li>Combining data frames</li>
+<li>Combining data frames using <code>pd.concat()</code></li>
 <li>Selecting data from large datasets</li>
 <li>Data wrangling with dates</li>
-<li>Visualizing time series</li>
+<li>Visualizing time series with <code>matplotlib</code></li>
 <li>Using <code>rolling()</code> to find a rolling average</li>
+<li>Reprojecting CRS using <code>.to_crs()</code></li>
 <li>True vs.&nbsp;false color imagery</li>
 </ul>
 </section>
@@ -1519,9 +1521,18 @@ The CRS of thomas_fire is:  EPSG:3857</code></pre>
 <li>https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</li>
 <li>https://www.usgs.gov/media/images/common-landsat-band-combinations</li>
 </ul>
-
-
 </section>
+</section>
+<section id="data-citations" class="level2">
+<h2 class="anchored" data-anchor-id="data-citations">Data Citations</h2>
+<ol type="1">
+<li><p>Daily AQI by County for 2017 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2017 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
+<li><p>Daily AQI by County for 2018 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2018 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
+<li><p>California Fire Perimeters U.S. Geological Survey. (n.d.). California Fire Perimeters - All. Data.gov. Retrieved November 17, 2024, from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</p></li>
+<li><p>Landsat Collection 2 Level 2 Data Microsoft Planetary Computer. (n.d.). Landsat Collection 2 Level 2 Dataset. Retrieved December 1, 2024, from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</p></li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->
