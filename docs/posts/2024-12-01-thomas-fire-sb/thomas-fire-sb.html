@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -212,6 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
   <li><a href="#highlights" id="toc-highlights" class="nav-link" data-scroll-target="#highlights">Highlights</a></li>
   <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
+  <li><a href="#data-citations" id="toc-data-citations" class="nav-link" data-scroll-target="#data-citations">Data Citations</a></li>
   <li><a href="#load-necessary-packages" id="toc-load-necessary-packages" class="nav-link" data-scroll-target="#load-necessary-packages">Load necessary packages</a></li>
   <li><a href="#read-in-data" id="toc-read-in-data" class="nav-link" data-scroll-target="#read-in-data">Read in data</a></li>
   <li><a href="#air-quality-index-aqi" id="toc-air-quality-index-aqi" class="nav-link" data-scroll-target="#air-quality-index-aqi">Air quality index (AQI)</a>
@@ -233,7 +234,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#true-color-imagery" id="toc-true-color-imagery" class="nav-link" data-scroll-target="#true-color-imagery">True color imagery</a></li>
   <li><a href="#false-color-imagery" id="toc-false-color-imagery" class="nav-link" data-scroll-target="#false-color-imagery">False color imagery</a></li>
   </ul></li>
-  <li><a href="#data-citations" id="toc-data-citations" class="nav-link" data-scroll-target="#data-citations">Data Citations</a></li>
   </ul>
 </nav>
     </div>
@@ -270,6 +270,15 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <p>The first two data set contain information from the US Environmental Protection Agency(EPA) regarding AQI. They contain information regarding daily AQI by county in 2017 and 2018.</p>
 <p>The fire perimeter data was obtained from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436. It contains the spatial distribution of large fires in California. It covers fires that date back to 1878.</p>
 <p>The landsat data was obtained from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2 and is from January 26, 2018. The fire perimeter data is from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436 and was accessed through the server at <code>/courses/EDS220/data/hwk4_landsat_data landsat8-2018-01-26-sb-simplified.nc</code>. It contains the spatial distribution of large fires in California and was pre-processed to remove data outside land and coarsen the spatial resolution.</p>
+</section>
+<section id="data-citations" class="level2">
+<h2 class="anchored" data-anchor-id="data-citations">Data Citations</h2>
+<ol type="1">
+<li><p>Daily AQI by County for 2017 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2017 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
+<li><p>Daily AQI by County for 2018 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2018 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
+<li><p>California Fire Perimeters U.S. Geological Survey. (n.d.). California Fire Perimeters - All. Data.gov. Retrieved November 17, 2024, from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</p></li>
+<li><p>Landsat Collection 2 Level 2 Data Microsoft Planetary Computer. (n.d.). Landsat Collection 2 Level 2 Dataset. Retrieved December 1, 2024, from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</p></li>
+</ol>
 </section>
 <section id="load-necessary-packages" class="level2">
 <h2 class="anchored" data-anchor-id="load-necessary-packages">Load necessary packages</h2>
@@ -313,10 +322,9 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>aqi_17_head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -404,17 +412,15 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 </div>
 </div>
 </div>
-</div>
 <div id="c39a057b-a020-442e-a798-61bb4a1bef03" class="cell" data-tags="[]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return first 5 rows of `aqi_18_head`</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>aqi_18_head <span class="op">=</span> aqi_18.head()</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>aqi_18_head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -499,7 +505,6 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 </tbody>
 </table>
 
-</div>
 </div>
 </div>
 </div>
@@ -616,10 +621,9 @@ Index(['state_name', 'county_name', 'state_code', 'county_code', 'date', 'aqi',
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>aqi_sb.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -685,7 +689,6 @@ Index(['state_name', 'county_name', 'state_code', 'county_code', 'date', 'aqi',
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="data-wrangling" class="level3">
 <h3 class="anchored" data-anchor-id="data-wrangling">Data wrangling</h3>
@@ -695,10 +698,9 @@ Index(['state_name', 'county_name', 'state_code', 'county_code', 'date', 'aqi',
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>aqi_sb.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -771,7 +773,6 @@ Index(['state_name', 'county_name', 'state_code', 'county_code', 'date', 'aqi',
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="data-visualization" class="level3">
 <h3 class="anchored" data-anchor-id="data-visualization">Data visualization</h3>
@@ -828,10 +829,9 @@ datum:                    World Geodetic System 1984 ensemble</code></pre>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>fire_perimeter.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -929,7 +929,6 @@ datum:                    World Geodetic System 1984 ensemble</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div id="b4f8ab1d-2b5c-48d4-b4cf-f09a71800030" class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the size of the df</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>fire_perimeter.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -974,10 +973,9 @@ datum:                    World Geodetic System 1984 ensemble</code></pre>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>thomas_fire.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1028,7 +1026,6 @@ datum:                    World Geodetic System 1984 ensemble</code></pre>
 </tbody>
 </table>
 
-</div>
 </div>
 </div>
 </div>
@@ -1521,18 +1518,9 @@ The CRS of thomas_fire is:  EPSG:3857</code></pre>
 <li>https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</li>
 <li>https://www.usgs.gov/media/images/common-landsat-band-combinations</li>
 </ul>
-</section>
-</section>
-<section id="data-citations" class="level2">
-<h2 class="anchored" data-anchor-id="data-citations">Data Citations</h2>
-<ol type="1">
-<li><p>Daily AQI by County for 2017 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2017 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
-<li><p>Daily AQI by County for 2018 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2018 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
-<li><p>California Fire Perimeters U.S. Geological Survey. (n.d.). California Fire Perimeters - All. Data.gov. Retrieved November 17, 2024, from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</p></li>
-<li><p>Landsat Collection 2 Level 2 Data Microsoft Planetary Computer. (n.d.). Landsat Collection 2 Level 2 Dataset. Retrieved December 1, 2024, from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</p></li>
-</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
