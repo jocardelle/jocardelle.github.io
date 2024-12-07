@@ -1,6 +1,6 @@
 ---
-title: "Prioritizing Marine Aquaculture"
-subtitle: "Determining which West Coast Exclusive Economic Zones are best suited for developing marine aquaculture"
+title: "Prioritizing marine aquaculture"
+description: "Determining which West Coast Exclusive Economic Zones are best suited for developing marine aquaculture"
 author:
   - name: Josephine Cardelle
     url: https://jocardelle.github.io/

@@ -1,6 +1,6 @@
 ---
 title: "Redlining and its effects on biodiversity in Los Angeles County"
-subtitle: "Exploring patterns of environmental justice"
+description: "Exploring patterns of environmental justice"
 author:
   - name: Josephine Cardelle
     url: https://jocardelle.github.io/
