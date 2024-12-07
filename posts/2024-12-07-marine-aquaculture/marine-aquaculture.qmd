@@ -1,0 +1,266 @@
+---
+title: "Prioritizing Marine Aquaculture"
+subtitle: "Determining which West Coast Exclusive Economic Zones are best suited for developing marine aquaculture"
+author:
+  - name: Josephine Cardelle
+    url: https://jocardelle.github.io/
+    affiliation: MEDS
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science
+date: 2024-12-07
+categories: [R, Quarto, MEDS, Geospatial]
+image: aquaculture.jpg
+toc: true
+execute: 
+  warning: false
+  message: false
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## About
+
+Marine aquaculture has the potential to be a sustainable protein option for global food supply ([Gentry et al.](https://www.nature.com/articles/s41559-017-0257-9)). In this project we will use data surrounding bathymetry, sea surface temperature (SST), and Exclusive Economic Zones (EEZ) to determine west coast areas suitable for marine aquaculture. We will specifically explore areas suitable for oysters and spiny lobsters.
+
+## Setup
+
+```{r}
+# Load libraries
+library(sf) # vector handling
+library(terra) # raster handling
+library(tidyverse)
+library(tmap) # map making
+library(spData) # spatial data
+library(spDataLarge) # spatial data
+library(here)
+library(tmaptools)
+library(kableExtra)
+```
+
+## Prepare Data
+
+```{r, echo = T, results = 'hide'}
+# Read in data
+sst_2008 <- rast(here("data", "average_annual_sst_2008.tif"))
+sst_2009 <- rast(here("data", "average_annual_sst_2009.tif"))
+sst_2010 <- rast(here("data", "average_annual_sst_2010.tif"))
+sst_2011 <- rast(here("data", "average_annual_sst_2011.tif"))
+sst_2012 <- rast(here("data", "average_annual_sst_2012.tif"))
+
+depth <- rast(here("data", "depth.tif"))
+
+eez <- st_read(here("data","wc_regions_clean.shp"))
+```
+
+```{r}
+# Create raster stack for sst
+sst <- c(sst_2008, sst_2009, sst_2010, sst_2011, sst_2012)
+# check if coordinate reference systems match and update if not
+if(crs(sst) == crs(depth) & crs(sst) == crs(eez) & crs(depth) == crs(eez)) {
+  print("Coordinate reference systems match")
+} else{
+  warning("Updating coordinate reference systems to match")
+  sst <- sst %>% 
+  project("EPSG:4326")
+depth <- depth %>% 
+  project("EPSG:4326")
+eez <- eez %>% 
+  st_set_crs("EPSG:4326")
+}
+
+```
+
+## Process Data
+
+```{r}
+# Find the mean SST from 2008-2012
+sst_mean <- mean(sst)
+
+# Convert average SST from Kelvin to Celsius
+sst_celsius <- (sst_mean - 273.15)
+
+# Crop depth raster to match the extent of the SST raster
+# Resample the depth data to match the resolution of the SST data using the nearest neighbor approach
+depth_res <- resample(crop(depth, sst_celsius), sst_celsius, method = "near")
+
+
+# Check that the depth and SST match in resolution, extent, and coordinate reference system
+stacked <- c(depth_res, sst_celsius)
+
+```
+
+## Determine suitable locations for Oysters
+
+For optimal growth, oysters should be in areas with sea surface temperature of 11 - 30° C and at a depth of 0 - 70 meters below sea level.
+
+```{r}
+# Create reclassification matrix for sst
+categories <- c("Unsuitable", "Suitable")
+
+sst_rcl <- matrix(c(-Inf, 11, 0,
+                    11, 30, 1,
+                    30, Inf, 0),
+                    ncol = 3, byrow = TRUE)
+
+# Use reclassification matrix to reclassify SST raster
+sst_reclassified <- classify(sst_celsius, rcl = sst_rcl)
+
+# Create reclassification matrix for depth
+depth_rcl <- matrix(c(-Inf, -70, 0,
+                    -70, 0, 1,
+                    0, Inf, 0),
+                    ncol = 3, byrow = TRUE)
+
+# Use reclassification matrix to reclassify depth raster
+depth_reclassified <- classify(depth_res, rcl = depth_rcl)
+
+# Find locations that satisfy both SST and depth conditions
+oyster_sst_depth <- lapp(c(sst_reclassified, depth_reclassified), function(x, y) x * y)
+
+```
+
+```{r}
+# Rasterize EEZ
+wc_rasterized <- rasterize(eez, oyster_sst_depth, field = 'rgn')
+  
+# Mask and calculate total area
+suitable_cells <- mask(cellSize(oyster_sst_depth, unit = "km"), oyster_sst_depth, maskvalue = 0)
+suitable_area <- terra::extract(suitable_cells, eez, fun = sum, na.rm = TRUE)
+names(suitable_area)[2] <- "area_km2"
+  
+
+# Join eez and suitable areas
+eez_suitable_area <- left_join(eez, suitable_area, by = c("rgn_id" = "ID")) %>%
+    rename(suitable_area = area_km2.y)
+
+# Make table
+kable(eez_suitable_area %>%
+  st_drop_geometry() %>%
+  select(Region = rgn,
+         "Total Suitable Area(km<sup>2</sup>)" = suitable_area), caption = "Total suitable area of West Coast EEZs for oysters")
+
+
+# Map results
+tmap_mode("view")
+area_map <- tm_shape(eez_suitable_area) +
+  tm_fill(col = "suitable_area",
+         title = "Total suitable area(km<sup>2</sup>) for oysters",
+          palette = "Greens") +
+  tm_borders() +
+  tm_legend(legend.outside = TRUE) +
+  tm_text("rgn", size = 0.5) +
+  tm_basemap("CartoDB.PositronNoLabels") +
+  tm_layout(
+    main.title = "Suitable EEZs for Oysters", 
+    main.title.position = "center") +
+  tm_scale_bar() +
+  tm_compass()
+
+
+area_map
+
+```
+
+According to our data, Washington has the most total area in Exclusive Economic Zones that are suitable for oysters on the West Coast. This is followed by Central California, Southern California, Oregon and Northern California, respectively.
+
+## Generalize workflow
+
+```{r, echo = T, results = 'hide'}
+depth_fun <- rast(here("data", "depth.tif"))
+
+eez_fun <- st_read(here("data","wc_regions_clean.shp"))
+
+suitable_eez <- function(species, min_depth, max_depth, min_temp, max_temp) {
+# Create raster stack for sst
+sst_fun <- c(sst_2008, sst_2009, sst_2010, sst_2011, sst_2012)
+
+# check if coordinate reference systems match and update if not
+if(crs(sst_fun) == crs(depth_fun) & crs(sst_fun) == crs(eez_fun) & crs(depth_fun) == crs(eez_fun)) {
+  print("Coordinate reference systems match")
+} else{
+  warning("Updating coordinate reference systems to match")
+  sst_fun <- sst_fun %>% 
+  project("EPSG:4326")
+depth_fun <- depth_fun %>% 
+  project("EPSG:4326")
+eez_fun <- eez_fun %>% 
+  st_set_crs("EPSG:4326")
+}
+
+# Find the mean SST from 2008-2012
+sst_mean_fun <- mean(sst_fun)
+
+# Convert average SST from Kelvin to Celsius
+sst_celsius_fun <- (sst_mean_fun - 273.15)
+
+# Crop depth raster to match the extent of the SST raster
+# Resample the depth data to match the resolution of the SST data using the nearest neighbor approach
+depth_res_fun <- resample(crop(depth_fun, sst_celsius_fun), sst_celsius_fun, method = "near")
+
+# Reclassify sst data
+
+sst_reclassified_fun <- classify(sst_celsius_fun, rcl = matrix(c(-Inf, min_temp, 0, min_temp, max_temp, 1, max_temp, Inf, 0), ncol = 3, byrow = TRUE))
+  depth_reclassified_fun <- classify(depth_res_fun, rcl = matrix(c(-Inf, -max_depth, 0, -max_depth, -min_depth, 1, -min_depth, Inf, 0), ncol = 3, byrow = TRUE))
+  
+# Combine suitability
+sst_depth_fun <- lapp(c(sst_reclassified_fun, depth_reclassified_fun), function(x, y) x * y)
+
+# Rasterize EEZ
+wc_rasterized_fun <- rasterize(eez_fun, sst_depth_fun, field = 'rgn')
+  
+# Mask and calculate area
+suitable_cells <- mask(cellSize(sst_depth_fun, unit = "km"), sst_depth_fun, maskvalue = 0)
+suitable_area_fun <- terra::extract(suitable_cells, eez_fun, fun = sum, na.rm = TRUE)
+names(suitable_area_fun)[2] <- "area_km2"
+  
+
+# Join eez and suitable areas
+eez_suitable_area_fun <- left_join(eez_fun, suitable_area_fun, by = c("rgn_id" = "ID")) %>%
+    rename(suitable_area = area_km2.y)
+
+
+
+# Map results
+tmap_mode("view")
+area_map_fun <- tm_shape(eez_suitable_area_fun) +
+  tm_fill(col = "suitable_area",
+         title = paste("Total suitable area(km<sup>2</sup>) for ", species),
+          palette = "Greens") +
+  tm_borders() +
+  tm_legend(legend.outside = TRUE) +
+  tm_text("rgn", size = 0.5) +
+  tm_basemap("CartoDB.PositronNoLabels") +
+    tm_layout(
+    main.title = paste("Suitable EEZs for", species), 
+    main.title.position = "center") +
+  tm_scale_bar() +
+  tm_compass(position = c("bottomleft"))
+
+return(area_map_fun)
+}
+```
+
+## Determine suitable locations for Spiny Lobster
+
+For optimal growth, oysters should be in areas with sea surface temperature of 23.7 - 28° C and at a depth of 0 - 90 meters below sea level.
+
+```{r}
+# Use function for Spiny Lobster
+suitable_eez(species = "Spiny Lobster", min_depth = 0 , max_depth = 90, min_temp = 23.7, max_temp = 28)
+```
+
+According to our data, Washington has the most total area in Exclusive Economic Zones that are suitable for Spiny Lobsters on the West Coast. This is followed by Central California, Oregon, Southern California, and Northern California, respectively.
+
+## Citations
+
+| Data                                                 | Citation                                                                                                                                                                                                             | Link                                                                           |
+|-------------------|-------------------------|----------------------------|
+| Sea Surface Temperaature                             | National Oceanic and Atmospheric Administration. "*NOAA Coral Reef Watch 5-km Satellite Sea Surface Temperature Anomaly Product.*" Accessed Nov. 11, 2024.                                                           | <https://coralreefwatch.noaa.gov/product/5km/index_5km_ssta.php>               |
+| Bathymetry                                           | **General Bathymetric Chart of the Oceans (GEBCO).** "*Gridded Bathymetry Data.*" Accessed Nov. 11, 2024.                                                                                                            | <https://www.gebco.net/data_and_products/gridded_bathymetry_data/#area>        |
+| Exclusive Economic Zones                             | **Marine Regions.** "*Exclusive Economic Zones (EEZ).*" Accessed Nov. 11, 2024.                                                                                                                                      | <https://www.marineregions.org/eez.php>                                        |
+| Spiny Lobster                                        | **SeaLifeBase.** "*Search Species.*" Accessed Nov. 26, 2024.                                                                                                                                                         | [https://www.sealifebase.ca/search.ph](https://www.sealifebase.ca/search.php)p |
+| Mapping the global potential for marine aquaculture. | Gentry, R. R., Froehlich, H. E., Grimm, D., Kareiva, P., Parke, M., Rust, M., Gaines, S. D., & Halpern, B. S. Mapping the global potential for marine aquaculture. *Nature Ecology & Evolution*, 1, 1317-1324 (2017) | <https://www.nature.com/articles/s41559-017-0257-9>                            |
