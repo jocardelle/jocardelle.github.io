@@ -14,7 +14,7 @@ website:
       - href: about.qmd
         text: About Me
       - href: posts.qmd
-        text: Blog
+        text: Projects
       - text: CV
         href: CV/J_Cardelle_Resume.pdf
   page-footer:

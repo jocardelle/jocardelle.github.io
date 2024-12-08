@@ -22,9 +22,11 @@ editor_options:
   chunk_output_type: console
 ---
 
+More content available at the [github repository](https://github.com/jocardelle/marine-aquaculture)
+
 ## About
 
-Marine aquaculture has the potential to be a sustainable protein option for global food supply ([Gentry et al.](https://www.nature.com/articles/s41559-017-0257-9)). In this project we will use data surrounding bathymetry, sea surface temperature (SST), and Exclusive Economic Zones (EEZ) to determine west coast areas suitable for marine aquaculture. We will specifically explore areas suitable for oysters and spiny lobsters.
+Marine aquaculture has the potential to be an important part of global food supply as a more sustainable option than land-based meat production ([Gentry et al.](https://www.nature.com/articles/s41559-017-0257-9)). In this project we will use data surrounding bathymetry, sea surface temperature (SST), and Exclusive Economic Zones (EEZ) to determine west coast areas suitable for marine aquaculture. We will specifically explore areas suitable for oysters and spiny lobsters.
 
 ## Setup
 
