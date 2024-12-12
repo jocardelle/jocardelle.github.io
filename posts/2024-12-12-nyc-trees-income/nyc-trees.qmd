@@ -2,7 +2,8 @@
 title: "Does money grow trees?" 
 description: "The relationship between street trees and incomes in New York City"
 author: "Josephine Cardelle"
-date: last-modified
+date: 2024-12-12
+categories: [R, Statistics, MEDS, Geospatial]
 execute: 
   warning: false
   message: false
