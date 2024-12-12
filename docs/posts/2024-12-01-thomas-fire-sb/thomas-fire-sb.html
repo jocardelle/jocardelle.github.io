@@ -212,7 +212,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
   <li><a href="#highlights" id="toc-highlights" class="nav-link" data-scroll-target="#highlights">Highlights</a></li>
   <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
-  <li><a href="#data-citations" id="toc-data-citations" class="nav-link" data-scroll-target="#data-citations">Data Citations</a></li>
   <li><a href="#load-necessary-packages" id="toc-load-necessary-packages" class="nav-link" data-scroll-target="#load-necessary-packages">Load necessary packages</a></li>
   <li><a href="#read-in-data" id="toc-read-in-data" class="nav-link" data-scroll-target="#read-in-data">Read in data</a></li>
   <li><a href="#air-quality-index-aqi" id="toc-air-quality-index-aqi" class="nav-link" data-scroll-target="#air-quality-index-aqi">Air quality index (AQI)</a>
@@ -234,6 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#true-color-imagery" id="toc-true-color-imagery" class="nav-link" data-scroll-target="#true-color-imagery">True color imagery</a></li>
   <li><a href="#false-color-imagery" id="toc-false-color-imagery" class="nav-link" data-scroll-target="#false-color-imagery">False color imagery</a></li>
   </ul></li>
+  <li><a href="#data-citations" id="toc-data-citations" class="nav-link" data-scroll-target="#data-citations">Data Citations</a></li>
   </ul>
 </nav>
     </div>
@@ -268,35 +268,24 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <section id="datasets" class="level2">
 <h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
 <p>The first two data set contain information from the US Environmental Protection Agency(EPA) regarding AQI. They contain information regarding daily AQI by county in 2017 and 2018.</p>
-<p>The fire perimeter data was obtained from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436. It contains the spatial distribution of large fires in California. It covers fires that date back to 1878.</p>
-<p>The landsat data was obtained from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2 and is from January 26, 2018. The fire perimeter data is from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436 and was accessed through the server at <code>/courses/EDS220/data/hwk4_landsat_data landsat8-2018-01-26-sb-simplified.nc</code>. It contains the spatial distribution of large fires in California and was pre-processed to remove data outside land and coarsen the spatial resolution.</p>
-</section>
-<section id="data-citations" class="level2">
-<h2 class="anchored" data-anchor-id="data-citations">Data Citations</h2>
-<ol type="1">
-<li><p>Daily AQI by County for 2017 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2017 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
-<li><p>Daily AQI by County for 2018 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2018 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</p></li>
-<li><p>California Fire Perimeters U.S. Geological Survey. (n.d.). California Fire Perimeters - All. Data.gov. Retrieved November 17, 2024, from https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</p></li>
-<li><p>Landsat Collection 2 Level 2 Data Microsoft Planetary Computer. (n.d.). Landsat Collection 2 Level 2 Dataset. Retrieved December 1, 2024, from https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</p></li>
-</ol>
+<p>The fire perimeter data was obtained from <a href="https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436">https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</a>. It contains the spatial distribution of large fires in California. It covers fires that date back to 1878.</p>
+<p>The landsat data was obtained from <a href="https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2">https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</a> and is from January 26, 2018. The fire perimeter data is from <a href="https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436">https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</a> and was accessed through the server at <code>/courses/EDS220/data/hwk4_landsat_data landsat8-2018-01-26-sb-simplified.nc</code>. It contains the spatial distribution of large fires in California and was pre-processed to remove data outside land and coarsen the spatial resolution.</p>
 </section>
 <section id="load-necessary-packages" class="level2">
 <h2 class="anchored" data-anchor-id="load-necessary-packages">Load necessary packages</h2>
-<div id="e581e3e9-be67-45f7-8e11-8f249c70d295" class="cell" data-tags="[]" data-execution_count="1">
+<div id="e581e3e9-be67-45f7-8e11-8f249c70d295" class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os              </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rioxarray <span class="im">as</span> rioxr</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rioxarray <span class="im">as</span> rioxr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="read-in-data" class="level2">
 <h2 class="anchored" data-anchor-id="read-in-data">Read in data</h2>
 <p>We can import the aqi data directly from the urls using pandas <code>pd.read_csv</code>. The fire perimeter and landsat data can be downloaded from the data folder using <code>geopandas</code> and <code>rasterio</code>, respectively.</p>
-<div id="1bdd1850-0f79-4795-aa84-1acc8a1d5a1b" class="cell" data-tags="[]" data-execution_count="2">
+<div id="1bdd1850-0f79-4795-aa84-1acc8a1d5a1b" class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AQI data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>aqi_17 <span class="op">=</span> pd.read_csv(<span class="st">'https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2017.zip'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>aqi_18 <span class="op">=</span> pd.read_csv(<span class="st">'https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2018.zip'</span>)</span>
@@ -316,11 +305,9 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 <section id="data-exploration" class="level3">
 <h3 class="anchored" data-anchor-id="data-exploration">Data exploration</h3>
 <p>In order to familiarize myself with the data I used various python functions. The functions I used for my initial exploration were <code>.head()</code>, <code>.shape</code>, <code>.nunique()</code>, and <code>.unique()</code>.</p>
-<div id="f2086a58-08da-4b91-996d-f54701da2045" class="cell" data-tags="[]" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return first 5 rows of `aqi_17_head`</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>aqi_17_head <span class="op">=</span> aqi_17.head()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>aqi_17_head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div id="f2086a58-08da-4b91-996d-f54701da2045" class="cell" data-tags="[]" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>aqi_17.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -412,11 +399,9 @@ Palm trees are consumed by the Thomas Fire. Photo credit: <a href="https://www.l
 </div>
 </div>
 </div>
-<div id="c39a057b-a020-442e-a798-61bb4a1bef03" class="cell" data-tags="[]" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return first 5 rows of `aqi_18_head`</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>aqi_18_head <span class="op">=</span> aqi_18.head()</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>aqi_18_head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div id="c39a057b-a020-442e-a798-61bb4a1bef03" class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>aqi_18.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -1514,13 +1499,22 @@ The CRS of thomas_fire is:  EPSG:3857</code></pre>
 <p>This map is showing a section of California that includes Ventura and Santa Barbara counties with false color imagery. The bands included in this false color image are short wave infared(SWIR), near infared(NIR), and red. The Thomas Fire of 2017 boundary is outlined shown in blue. Compared to the true color image, you can see a drastic difference in areas where the fire took place and areas that were not burned. Recently burned areas appear red due to the fact that they highly reflect shortwave infared. You can see the red inside the Thomas Fire boundary. This satellite imagery was from 1/26/2018 and the Thomas Fire started 12/4/2017 and was contained on 1/12/2018. This imagery is therefore taken shortly after the fire was contained.</p>
 <p>Information on false color imagery was obtained from:</p>
 <ul>
-<li>https://earthobservatory.nasa.gov/features/FalseColor</li>
-<li>https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</li>
-<li>https://www.usgs.gov/media/images/common-landsat-band-combinations</li>
+<li><a href="https://earthobservatory.nasa.gov/features/FalseColor">https://earthobservatory.nasa.gov/features/FalseColor</a></li>
+<li><a href="https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites">https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites</a></li>
+<li><a href="https://www.usgs.gov/media/images/common-landsat-band-combinations">https://www.usgs.gov/media/images/common-landsat-band-combinations</a></li>
 </ul>
-
-
 </section>
+</section>
+<section id="data-citations" class="level2">
+<h2 class="anchored" data-anchor-id="data-citations">Data Citations</h2>
+<ol type="1">
+<li><p>Daily AQI by County for 2017 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2017 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</a></p></li>
+<li><p>Daily AQI by County for 2018 U.S. Environmental Protection Agency. (n.d.). Daily air quality index (AQI) by county: 2018 [Data set]. Air Quality System (AQS) Data Mart. Retrieved December 1, 2024, from <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI</a></p></li>
+<li><p>California Fire Perimeters U.S. Geological Survey. (n.d.). California Fire Perimeters - All. Data.gov. Retrieved November 17, 2024, from <a href="https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436">https://catalog.data.gov/dataset/california-fire-perimeters-all-b3436</a></p></li>
+<li><p>Landsat Collection 2 Level 2 Data Microsoft Planetary Computer. (n.d.). Landsat Collection 2 Level 2 Dataset. Retrieved December 1, 2024, from <a href="https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2">https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2</a></p></li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->
