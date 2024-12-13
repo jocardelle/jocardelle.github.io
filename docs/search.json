@@ -200,7 +200,7 @@
     "href": "posts/2024-12-12-nyc-trees-income/nyc-trees.html#about",
     "title": "Does money grow trees?",
     "section": "About",
-    "text": "About\nDoes money grow (on) trees? Trees and other plants are known to have a natural cooling effect (Shashua-Bar & Hoffman, 2000). For this reason, trees are often used in urban areas to reduce temperatures and the effects of climate change. A study by McDonald et. al., showed that in about 92% of urbanized areas studied, there was tree cover inequalities between high and low income areas. They also found that high income blocks had on average 15.2% more tree coverage than low income blocks.\nIn our analysis, we will explore the relationship between median income and trees per km2 in New York City. We will then explore other possible parameters to add to improve our model."
+    "text": "About\nDoes money grow (on) trees? Trees and other plants are known to have a natural cooling effect (Shashua-Bar & Hoffman, 2000). For this reason, trees are often used in urban areas to reduce temperatures and the effects of climate change. A study by McDonald et. al., showed that in about 92% of urbanized areas studied, there were tree coverage inequalities between high and low income areas. They also found that high income blocks had on average 15.2% more tree coverage than low income blocks.\nIn our analysis, we will explore the relationship between median income and trees per km2 in New York City. We will then explore other possible parameters to add to improve our model."
   },
   {
     "objectID": "posts/2024-12-12-nyc-trees-income/nyc-trees.html#load-packages",
