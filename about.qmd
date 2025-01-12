@@ -4,12 +4,38 @@ title: "About Me"
 
 ## A Short Background
 
-Coming soon:) 
+My career in conservation began during my undergraduate degree in civil engineering. The environmental and geotechnical aspects of civil engineering are what drew me to it. As a student, I had the opportunity to work as an undergraduate researcher in McGill's environmental geomechanics lab, under the direction of Dr. A.P.S. Selvadurai. The research centered around a granite rock used as a repository for nuclear waste, and inspired my interest in the environmental sector. In the summer of 2018, I had the opportunity to travel to East Africa to work with local NGOs and nonprofits focused on conservation. This fueled my already burning passion for working abroad. After graduating, I completed an AmeriCorps service for the [American Conservation Experience](https://www.usaconservation.org/). I worked on public lands such as Zion and Bryce Canyon National Parks on a variety of projects that included invasive species mitigation, wildfire fuels reduction, trail maintenance and construction, and cattle exclusion fencing.
+
+I then began working as a civil engineer for the [USDAs Natural Resources Conservation Service (NRCS)](https://www.nrcs.usda.gov/) in the Commonwealth of the Northern Mariana Islands(CNMI). I spent two and a half years working with historically underserved farmers to protect the natural resources of their lands. My work included designing conservation practices requiring engineering assistance such animal waste management, erosion control, and irrigation systems. All of these experiences lead me to the beginning of my career as a data scientist.
+
+::: {layout-ncol="2"}
+![Work break in Zion NP](images/IMG_7671.jpeg){fig-align="center" width="563"}
+
+![Project inspection in the CNMI](images/5F9FEB73-6608-459F-B615-AADF84B2AD54-01.JPG){fig-align="center" width="563"}
+:::
 
 ## Currently
 
-Coming soon:)
+I'm a current student in the [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at UC Santa Barbara's Bren School of Environmental Science & Management. Through this program I'm growing my coding skills, particularly in R and Python. I am also learning how to apply these skills to real world environmental issues.
+
+I am currently working on a capstone project focused on environmental justice. My group members and I are seeking to improve the [Climate and Economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5). This tool was created to determine communities eligible for federal funding from the Justice40 Initiative, which aims to direct 40% of overall benefits from investments in climate, clean energy, and sustainable housing into disadvantaged communities.
+
+In addition to being a student, I am working on a research project for [Larsen Lab](http://www.ashleylarsen.com/). The project focuses on using Python to digitize historical land use maps. The maps are from Kern Couty, one of the msot valuable crop producing counties in the US, and date back to the 1950s.
 
 ## Fun Stuff!
 
-Coming soon:)
+When I'm not coding away on my computer you can most likely find me outside. My favorite hobby is traveling which has taken me to many places around the world such as Guatemala, Japan, the Philippines, Indonesia, Columbia, Portugal, Thailand, Rwanda, and more. Some of my other favorite activities include hiking, biking, scuba diving, playing soccer, and running.
+
+::: {layout-ncol="2"}
+![Banff National Park](images/IMG_4869.JPG){fig-align="center" width="563"}
+
+![Christmas scuba dive](images/IMG_3950.JPG){fig-align="center" width="563"}
+
+![Cycling in Saipan](images/IMG_4079.jpg){fig-align="center" width="563"}
+
+![Elephant Nature Park Sanctuary, Thailand](images/IMG_2817.jpg){fig-align="center" width="563"}
+
+![Soccer with the Northern Mariana Islands Football Association](images/IMG_9042.JPG){fig-align="center" width="563"}
+
+![Hiking Mount Bisoke in Rwanda](images/CA5A8DD2-568D-4C03-9EC6-4E5B13E9DE18.jpg){fig-align="center" width="\"563"}
+:::
