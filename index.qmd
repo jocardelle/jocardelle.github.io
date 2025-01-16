@@ -20,31 +20,35 @@ about:
 toc: false
 ---
 
-Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues.  Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out! 
+Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out!
 
 ## Education
 
 **Master of Environmental Data Science** *(Expected June 2025)*
 
-- Bren School of Environmental Science & Management, UCSB
+-   Bren School of Environmental Science & Management, UCSB
 
 **Bachelor of Engineering, Civil Engineering** *(May 2021)*
 
-- McGill University
-- Specialization in Geotechnical Engineering
+-   McGill University
+-   Specialization in Geotechnical Engineering
 
 ## Professional Experience
 
+**GIS Graduate Researcher** *(November 2024 - Present)*
+
+-   [Larsen Lab](http://www.ashleylarsen.com/research.html) - Bren School of Environmental Science & Management, UCSB
+
 **Civil/Agricultural Engineer** *(January 2022 - April 2024)*
 
-- USDA - Natural Resources Conservation Service
-- Commonwealth of the Northern Mariana Islands (CNMI)
+-   USDA - Natural Resources Conservation Service
+-   Commonwealth of the Northern Mariana Islands (CNMI)
 
 **Engineering Undergraduate Researcher** *(May 2019 - August 2019)*
 
-- Environmental Geomechanics Laboratory - McGill University
+-   Environmental Geomechanics Laboratory - McGill University
 
 **Conservation Corps** *(July 2021 - October 2021)*
 
-- AmeriCorps - American Conservation Experience
-- Hurricane, Utah
+-   AmeriCorps - American Conservation Experience
+-   Hurricane, Utah
