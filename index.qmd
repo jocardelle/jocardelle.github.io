@@ -20,7 +20,7 @@ about:
 toc: false
 ---
 
-Hi everyone! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues.  Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out! 
+Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and food security facing our agriculture industry. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues.  Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out! 
 
 ## Education
 
