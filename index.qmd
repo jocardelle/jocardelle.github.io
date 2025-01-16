@@ -2,7 +2,7 @@
 #title: "Josephine Cardelle"
 image: Josephine_Cardelle.jpeg
 about: 
-  template: solana
+  template: trestles
   links: 
     - text: LinkedIn
       icon: linkedin
