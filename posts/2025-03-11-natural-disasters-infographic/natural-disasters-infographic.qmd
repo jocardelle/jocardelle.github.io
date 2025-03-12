@@ -11,7 +11,7 @@ categories: [R, MEDS, Data-Visualization]
 toc: true
 bibliography: references.bib
 cls: /Users/jocardelle/Downloads/plos-computational-biology.csl
-image: choropleth_map.png
+image: choropleth_map.jpg
 citation: 
   url: https://jocardelle.github.io/posts/2025-03-11-natural-disasters-infographic/
 execute: 
