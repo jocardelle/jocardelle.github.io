@@ -41,11 +41,11 @@ I went about answering this with three sub-questions:
 
 1.  *What have been the deadliest natural disasters in the past 25 years and which disaster type is most likely to cause fatalities?*
 
-2.  *How does natural disaster frequency vary across geogrpahic regions?*
+2.  *How does natural disaster frequency vary across geographic regions?*
 
 3.  *What are the most common natural disaster types?*
 
-With these questions defined, my goal was to create an infographic that would provide viewers with a comprehensive overview of global natural disaster patterns in the most efficient, effective, and responsible way possible. I combined three different visualization types(a choropleth map, circular bar chart, and tree map) to answer my research questions while ensuring the final product would be both informative and visually engaging. Each visualization was designed to highlight different aspects of the data, working together to tell a complete story about natural disasters over the past 25 years.
+With these questions defined, my goal was to create an infographic that would provide viewers with a comprehensive overview of global natural disaster patterns in the most efficient, effective, and responsible way possible. I combined three different visualization types a choropleth map, circular bar chart, and tree map) to answer my research questions while ensuring the final product would be both informative and visually engaging. Each visualization was designed to highlight different aspects of the data, working together to tell a complete story about natural disasters over the past 25 years.
 
 ## The Data
 
@@ -294,7 +294,7 @@ While the original visualizations were created in R, the annotations, titles, an
 
 1.  **Graphic Forms -** The three graphic forms I chose were a choropleth map, a circular bar chart, and a tree map. The choropleth map allowed me to effectively visualize patterns surrounding regions affected by natural disasters. I normalized the variable by using disasters per million people and create a comparison based on country population. The circular bar chart allowed me to take a deeper look at the impacts of specific natural disasters. It also allowed for easy comparison with each wedge length corresponding to fatality count. With the tree map I was able to easily visualize which were the most frequent disaster types in the past 25 years by providing immediate visual cues about frequency based on size comparison.
 
-2.  **Text -** The title "25 Years of Natural Disasters" clearly stated the subject and time frame of the infographic, while the subtitle gave more detail about specifics of the exploration. I decided the disaster definition was crucial context for the infographic, so centered and highlighted it.The annotations for the two graphs on the bottom were included to highlight key takeaways. The data source and date of access were also included, as they are important information for any data exploration.
+2.  **Text -** The title "25 Years of Natural Disasters" clearly stated the subject and time frame of the infographic, while the subtitle gave more detail about specifics of the exploration. I decided the disaster definition was crucial context for the infographic, so centered and highlighted it. The annotations for the two graphs on the bottom were included to highlight key takeaways. The data source and date of access were also included, as they are important information for any data exploration.
 
 3.  **Themes -** I chose a neutral background as this is a serious subject matter and it also allowed for contrast with the other elements.
 
@@ -313,4 +313,5 @@ While the original visualizations were created in R, the annotations, titles, an
 10. **DEI lens -** While I could have focused this data on specific regions, I decided global representation was important. I also normalized the choropleth map by showing disasters per million people, in order to avoid bias towards more populous countries.
 
 ## Citations
-1. Centre for Research on the Epidemiology of Disasters (CRED). (2025). EM-DAT: The International Disaster Database. Retrieved February 24, 2025, from https://www.emdat.be/
+
+1.  Centre for Research on the Epidemiology of Disasters (CRED). (2025). EM-DAT: The International Disaster Database. Retrieved February 24, 2025, from https://www.emdat.be/
