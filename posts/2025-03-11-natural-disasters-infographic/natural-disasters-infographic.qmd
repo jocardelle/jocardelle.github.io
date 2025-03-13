@@ -45,7 +45,7 @@ I went about answering this with three sub-questions:
 
 3.  *What are the most common natural disaster types?*
 
-With these questions defined, my goal was to create an infographic that would provide viewers with a comprehensive overview of global natural disaster patterns in the most efficient, effective, and responsible way possible. I combined three different visualization types a choropleth map, circular bar chart, and tree map) to answer my research questions while ensuring the final product would be both informative and visually engaging. Each visualization was designed to highlight different aspects of the data, working together to tell a complete story about natural disasters over the past 25 years.
+With these questions defined, my goal was to create an infographic that would provide viewers with a comprehensive overview of global natural disaster patterns in the most efficient, effective, and responsible way possible. I combined three different visualization types (a choropleth map, circular bar chart, and tree map) to answer my research questions while ensuring the final product would be both informative and visually engaging. Each visualization was designed to highlight different aspects of the data, working together to tell a complete story about natural disasters over the past 25 years.
 
 ## The Data
 
@@ -162,7 +162,7 @@ ggplot(fatalities, aes(x = factor(id), y = total_deaths, fill = disaster_type)) 
 
 ### Visualization #2 - *How does natural disaster frequency vary across regions?*
 
-I wanted to include all countries in this visualization, making a choropleth map the best way to show global patterns. In order to normalize the variables, I decided to map number of disasters per million people.
+I wanted to include all countries in this visualization, making a choropleth map the best way to show global patterns. In order to normalize the variables, I decided to map the number of disasters per million people.
 
 ```{r, fig.width=10, fig.height=8}
 # Count disasters by country
