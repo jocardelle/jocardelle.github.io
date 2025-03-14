@@ -55,7 +55,7 @@ I decided to look at international natural disasters in the years 2000-2025. The
 
 ## The Outcome
 
-![](natural_disasters_infographic.jpg){fig-alt="Infographic about worldwide natural disasters in the years 2000-2025. Graphs include a choropleth map showing number of recorded disasters per million people per country, a circular bar chart showing the top 10 deadliest natural disasters, and a tree map showing the most frequent natural disasters. The deadliest natural disaster in the past 25 years was the 2010 Haiti earthquake with over 222,000 deaths. The most frequent natural disasters are Floods and Storms with 4,121 and 2,693 incidents, respectively." fig-align="center"}
+![](natural_disasters_infographic2.jpg){fig-alt="Infographic about worldwide natural disasters in the years 2000-2025. Graphs include a choropleth map showing number of recorded disasters per million people per country, a circular bar chart showing the top 10 deadliest natural disasters, and a tree map showing the most frequent natural disasters. The deadliest natural disaster in the past 25 years was the 2010 Haiti earthquake with over 222,000 deaths. The most frequent natural disasters are Floods and Storms with 4,121 and 2,693 incidents, respectively." fig-align="center"}
 
 ## The Process
 
