@@ -18,9 +18,9 @@ I then began working as a civil engineer for the [USDAs Natural Resources Conser
 
 I'm a graduate student in the [Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at UC Santa Barbara's Bren School of Environmental Science & Management. Through this program I'm growing my coding skills, particularly in R and Python. I am also learning how to apply these skills to real world environmental issues.
 
-I am also working on a capstone project focused on environmental justice. My group members and I are seeking to improve the [Climate and Economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5). This tool was created to determine communities eligible for federal funding from the Justice40 Initiative, which aims to direct 40% of overall benefits from investments in climate, clean energy, and sustainable housing into disadvantaged communities.
+I am also working on a capstone project focused on environmental justice. My group members and I are seeking to improve the [Climate and Economic Justice Screening Tool](https://edgi-govdata-archiving.github.io/j40-cejst-2/en/#4/33.47/-97.5). This tool was created to determine communities eligible for federal funding from the [Justice40 Initiative](https://bidenwhitehouse.archives.gov/environmentaljustice/justice40/), which aimed to direct 40% of overall benefits from investments in climate, clean energy, and sustainable housing into disadvantaged communities.
 
-In addition to being a student, I am working on a research project for [Larsen Lab](http://www.ashleylarsen.com/). The project focuses on using Python to digitize historical land use maps. The maps are from Kern County, one of the most valuable crop producing counties in the US, and date back to the 1950s.
+In addition to being a student, I am working on a research project for UCSB's [Earth Research Institute](https://www.eri.ucsb.edu/) under the direction of Dr. Ashley Larsen. The project focuses on using Python to digitize hand-drawn historical land use maps. The maps are from Kern County, one of the most valuable crop producing counties in the US, and date back to the 1950s.
 
 ## Fun Stuff!
 
