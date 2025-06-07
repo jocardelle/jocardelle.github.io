@@ -16,7 +16,7 @@ website:
       - href: posts.qmd
         text: Projects
       - text: CV
-        href: CV/JCardelle_CV.pdf
+        href: CV/CV_JCardelle.pdf
   page-footer:
     background: light
     left: Copyright 2024, Josephine Cardelle
