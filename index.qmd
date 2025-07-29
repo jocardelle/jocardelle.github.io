@@ -20,11 +20,11 @@ about:
 toc: false
 ---
 
-Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Science student at UC Santa Barbara. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and environmental justice. I also have a degree in Civil Engineering and am excited to utilize both these degrees to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out!
+Hi! I’m Josephine (Jo) Cardelle, an environmental data scientist. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and environmental justice. I'm also a civil engineer and am excited to utilize these skills to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out!
 
 ## Education
 
-**Master of Environmental Data Science** *(Expected June 2025)*
+**Master of Environmental Data Science** *(June 2025)*
 
 -   Bren School of Environmental Science & Management, UCSB
 
@@ -35,9 +35,15 @@ Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Scienc
 
 ## Professional Experience
 
-**GIS Graduate Researcher** *(November 2024 - Present)*
+**Data Management Specialist & Social Sciences Analyst** *(July 2025 - Present)*
 
--   [Earth Research Institute](https://www.eri.ucsb.edu/) - UC Santa Barbara
+-   [Pacific States Marine Fisheries Commission](https://www.psmfc.org/)
+-   Seattle, Washington
+
+**GIS Graduate Researcher** *(November 2024 - June 2025)*
+
+-   [Earth Research Institute](https://www.eri.ucsb.edu/) 
+-   UC Santa Barbara
 
 **Civil/Agricultural Engineer** *(January 2022 - April 2024)*
 
@@ -46,7 +52,8 @@ Hi! I’m Josephine (Jo) Cardelle, a current Master of Environmental Data Scienc
 
 **Engineering Undergraduate Researcher** *(May 2019 - August 2019)*
 
--   Environmental Geomechanics Laboratory - McGill University
+-   Environmental Geomechanics Laboratory
+-   McGill University
 
 **Conservation Corps** *(July 2021 - October 2021)*
 
