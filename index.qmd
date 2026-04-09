@@ -20,7 +20,7 @@ about:
 toc: false
 ---
 
-Hi! I’m Josephine (Jo) Cardelle, an environmental data scientist. I have a passion for using data science to problem-solve issues around climate change, natural resource protection, and environmental justice. I'm also a civil engineer and am excited to utilize these skills to broaden my impact on environmental issues. Outside of work and school I love hiking, running, reading, scuba diving and traveling. Check out my site to learn more and feel free to reach out!
+Hi! I’m Josephine (Jo) Cardelle, a data scientist and civil engineer. I have a passion for using data science to problem-solve issues around social justice, natural resource protection, and environmental justice. I’m excited to utilize all my skills to broaden my impact on problematic issues facing our communities. Outside of work and school I love hiking, running, reading, scuba diving, and traveling. Check out my site to learn more and feel free to reach out!
 
 ## Education
 
